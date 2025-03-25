@@ -1,0 +1,132 @@
+#box:hover {
+    --border-angle: 0deg;
+    position: absolute;
+
+    animation: border-angle-rotate 2s infinite linear;
+    border: 0.5rem solid transparent;
+    position: relative;
+    
+  
+    & {
+      background:  padding-box,
+        conic-gradient(
+            from var(--border-angle),
+            var(--bg) 50%,
+          #19db5d
+          )
+          border-box;
+    }
+  
+  
+      &:before {
+        inset: 0;
+        background: repeating-conic-gradient(
+            from var(--border-angle),
+            var(--bg),
+            var(--bg) 30deg,
+            oklch(100% 50% 190deg) calc(360deg / 6)
+          )
+          border-box;
+      }
+  
+      &:after {
+        background: repeating-conic-gradient(
+            from calc(var(--border-angle) * -1),
+            oklch(100% 40% 50deg),
+            rgb(254, 12, 12) 60deg
+          )
+          border-box;
+      }
+    }
+  
+  
+  @keyframes border-angle-rotate {
+    from { --border-angle: 0deg; }
+    to { --border-angle: 360deg; }
+  }
+  
+  
+  /** boilerplate **/
+  body {
+    --bg: hsl(190deg 20% 10%);
+    background: var(--bg);
+    font-size: 32px;
+    display: flex;
+    place-content: center;
+    gap: 8rem;
+    min-height: 100svh;
+    flex-wrap: wrap;
+  }
+  
+  @property --border-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+  
+  #circle {
+    --border-angle: 0deg;
+    position: absolute;
+
+    animation: border-angle-rotate 2s infinite linear;
+    border: 0.5rem solid transparent;
+    position: relative;
+    
+  
+    & {
+      background:  padding-box,
+        conic-gradient(
+            from var(--border-angle),
+            var(--bg) 50%,
+          #19db5d
+          )
+          border-box;
+    }
+  
+  
+      &:before {
+        inset: 0;
+        background: repeating-conic-gradient(
+            from var(--border-angle),
+            var(--bg),
+            var(--bg) 30deg,
+            oklch(100% 50% 190deg) calc(360deg / 6)
+          )
+          border-box;
+      }
+  
+      &:after {
+        background: repeating-conic-gradient(
+            from calc(var(--border-angle) * -1),
+            oklch(100% 40% 50deg),
+            rgb(254, 12, 12) 60deg
+          )
+          border-box;
+      }
+    }
+  
+  
+  @keyframes border-angle-rotate {
+    from { --border-angle: 0deg; }
+    to { --border-angle: 360deg; }
+  }
+  
+  
+  /** boilerplate **/
+  body {
+    --bg: hsl(190deg 20% 10%);
+    background: var(--bg);
+    font-size: 32px;
+    display: flex;
+    place-content: center;
+    gap: 8rem;
+    min-height: 100svh;
+    flex-wrap: wrap;
+  }
+  
+  @property --border-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+  
